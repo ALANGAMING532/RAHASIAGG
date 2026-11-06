@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Special Person 💗</title>
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family:'Segoe UI',sans-serif;
+  background:#fff0f6;
+  color:#803b60;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+button {
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.3s;
+}
+
+button:hover {
+  transform:scale(1.05);
+}
+
+.hidden {display:none!important;}
+
+.btn {
+  padding:12px 23px;
+  border-radius:30px;
+  color:white;
+  background:linear-gradient(135deg,#ff5599,#bb6bff);
+  margin:6px;
+  box-shadow:0 5px 15px #d45d9b44;
+}
+
+.btn2 {
+  background:white;
+  color:#d94c91;
+  padding:12px 20px;
+  border-radius:25px;
+  margin:6px;
+}
+
+/* PEMBUKAAN */
+
+#opening {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(135deg,#ffb5d0,#d8b5ff,#ffc8e0);
+}
+
+.open-card {
+  max-width:450px;
+  width:100%;
+  padding:35px 20px;
+  background:#ffffffb9;
+  border-radius:30px;
+  box-shadow:0 15px 50px #ad4e8040;
+}
+
+.open-card h1 {
+  color:#d63f83;
+  margin:15px 0;
+}
+
+.envelope {
+  width:250px;
+  height:160px;
+  margin:55px auto 35px;
+  background:#f65d9c;
+  position:relative;
+  border-radius:8px;
+  box-shadow:0 12px 25px #a9447544;
+}
+
+.envelope:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#ff99ba;
+  clip-path:polygon(0 0,50% 60%,100% 0);
+  z-index:2;
+}
+
+.envelope:after {
+  content:"❤️";
+  font-size:38px;
+  position:absolute;
+  top:60px;
+  left:105px;
+  z-index:3;
+}
+
+.paper {
+  position:absolute;
+  background:white;
+  width:85%;
+  height:90%;
+  left:7.5%;
+  top:5%;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:bold;
+  transition:.8s;
+}
+
+.envelope.open .paper {
+  transform:translateY(-100px);
+}
+
+.envelope.open:before {
+  transform:rotateX(180deg);
+  transition:.8s;
+  transform-origin:top;
+}
+
+/* HEADER */
+
+header {
+  background:linear-gradient(135deg,#ff78aa,#c77aff);
+  color:white;
+  text-align:center;
+  padding:60px 15px;
+  position:relative;
+  overflow:hidden;
+}
+
+header h1 {
+  font-size:clamp(32px,7vw,60px);
+  margin:15px 0;
+  text-shadow:0 5px 12px #7b246e44;
+}
+
+header p {font-size:18px;}
+
+.big-heart {
+  font-size:48px;
+  animation:beat 1s infinite;
+}
+
+@keyframes beat {
+  50% {transform:scale(1.25);}
+}
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#fffafc;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:10px;
+  box-shadow:0 4px 15px #a84e771c;
+}
+
+nav a {
+  text-decoration:none;
+  color:#c34382;
+  padding:10px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+/* SECTION */
+
+section {
+  max-width:1050px;
+  margin:auto;
+  padding:45px 18px;
+  text-align:center;
+}
+
+.section-title {
+  color:#d64b91;
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.box {
+  background:white;
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 7px 25px #b9508c1c;
+  line-height:1.9;
+}
+
+/* JAM */
+
+.clock {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:25px 0;
+}
+
+.clock div {
+  background:linear-gradient(135deg,#ff76a9,#b67aff);
+  color:white;
+  min-width:75px;
+  padding:15px 10px;
+  border-radius:15px;
+}
+
+.clock strong {
+  display:block;
+  font-size:25px;
+}
+
+/* GALERI */
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.photo {
+  background:white;
+  padding:12px;
+  border-radius:20px;
+  box-shadow:0 7px 22px #a83d7620;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.photo:hover {
+  transform:translateY(-6px) rotate(-1deg);
+}
+
+.photo img {
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.photo h3 {
+  color:#d64b91;
+  margin:12px 0 5px;
+}
+
+.photo p {
+  font-size:14px;
+  line-height:1.7;
+  padding:5px 8px 12px;
+}
+
+/* KUE */
+
+.cake {
+  font-size:100px;
+  animation:beat 2s infinite;
+  margin:20px;
+}
+
+/* SURAT */
+
+.message {
+  background:linear-gradient(135deg,#fff,#ffe5f1);
+  border:2px dashed #ee8eb7;
+  border-radius:20px;
+  padding:30px;
+  line-height:2;
+  white-space:pre-line;
+}
+
+/* GAME */
+
+.game-result {
+  font-size:22px;
+  margin:20px;
+  color:#d34b8c;
+}
+
+/* EDITOR */
+
+#editor {
+  display:none;
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  margin:30px auto;
+  max-width:750px;
+  text-align:left;
+}
+
+#editor input,#editor textarea {
+  width:100%;
+  padding:12px;
+  margin:7px 0 15px;
+  border:1px solid #efa9c9;
+  border-radius:10px;
+  font-family:inherit;
+}
+
+#editor textarea {
+  min-height:75px;
+}
+
+#editor label {
+  font-weight:bold;
+}
+
+footer {
+  background:linear-gradient(135deg,#ff82ae,#b875f1);
+  color:white;
+  padding:35px 15px;
+  text-align:center;
+  line-height:2;
+}
+
+/* KONFETI DAN HATI */
+
+.fall {
+  position:fixed;
+  top:-30px;
+  z-index:100;
+  pointer-events:none;
+  animation:fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+/* FOTO POPUP */
+
+#lightbox {
+  position:fixed;
+  inset:0;
+  background:#000d;
+  z-index:100;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+#lightbox img {
+  max-width:95%;
+  max-height:85vh;
+  border-radius:15px;
+}
+
+@media(max-width:600px) {
+  .gallery {grid-template-columns:1fr;}
+  .photo img {height:260px;}
+  nav a {font-size:11px;padding:8px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HALAMAN PEMBUKA -->
+
+<div id="opening">
+  <div class="open-card">
+    <div style="font-size:45px">💌🌸💗</div>
+    <h1>Ada Surat Spesial!</h1>
+    <p>Seseorang punya kejutan kecil untukmu...</p>
+
+    <div class="envelope" id="envelope">
+      <div class="paper">
+         pe
+      </div>
+    </div>
+
+    <button class="btn" onclick="openLetter()">
+      BUKA SURAT 💌
+    </button>
+
+    <p style="margin-top:20px">
+      Tekan untuk membuka kejutanmu ✨
+    </p>
+  </div>
+</div>
+
+
+<!-- WEBSITE UTAMA -->
+
+<div id="main" class="hidden">
+
+<header>
+  <div class="big-heart">🎂💗🎉</div>
+  <p>A Special Day For</p>
+  <h1 id="heroTitle">HAPPY BIRTHDAY!</h1>
+  <h2 id="heroName">My Special Female Friend ❤️</h2>
+  <p id="heroDate">10 November 2026</p>
+  <br>
+  <button class="btn2" onclick="confetti()">🎊 RAYAKAN!</button>
+</header>
+
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#galeri">GALERI</a>
+  <a href="#countdown">COUNTDOWN</a>
+  <a href="#cake">KUE</a>
+  <a href="#surat">SURAT</a>
+  <a href="#game">GAME</a>
+</nav>
+
+
+<!-- UCAPAN -->
+
+<section id="home">
+  <h2 class="section-title">💗 Happy Birthday 💗</h2>
+  <div class="box">
+    <h3 id="typing"></h3>
+    <p id="introText">
+      Hari ini adalah hari yang sangat spesial.
+      Semoga semua impianmu tercapai, selalu diberikan
+      kesehatan, kebahagiaan, dan dikelilingi orang-orang baik.
+      Teruslah bersinar dan jangan pernah berhenti tersenyum.
+      Kamu pantas mendapatkan semua hal baik di dunia ini! ❤️
+    </p>
+  </div>
+</section>
+
+
+<!-- GALERI 10 FOTO -->
+
+<section id="galeri">
+  <h2 class="section-title">📸 10 Kenangan Spesial kamu</h2>
+  <p style="margin-bottom:25px">
+    Setiap foto punya cerita tersendiri 💕
+  </p>
+
+  <div class="gallery" id="gallery"></div>
+
+  <br>
+  <button class="btn" onclick="startSlideshow()">
+    ▶ LIHAT SLIDESHOW
+  </button>
+  <button class="btn" onclick="stopSlideshow()">
+    ⏸ BERHENTI
+  </button>
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section id="countdown">
+  <h2 class="section-title">⏰ Jam Spesial</h2>
+  <div class="box">
+    <p>Waktu terus berjalan, dan hari ini menjadi kenangan indah!</p>
+    <div class="clock">
+      <div><strong id="hours">00</strong>Jam</div>
+      <div><strong id="minutes">00</strong>Menit</div>
+      <div><strong id="seconds">00</strong>Detik</div>
+    </div>
+    <p id="digitalClock"></p>
+  </div>
+</section>
+
+
+<!-- KUE ULANG TAHUN -->
+
+<section id="cake">
+  <h2 class="section-title">🎂 empos lilin!</h2>
+
+  <div class="box">
+    <div class="cake" id="cakeEmoji">🎂</div>
+    <h3 id="cakeText">Jangan lupa buat permohonan!</h3>
+    <p>Tekan tombol di bawah untuk meniup lilin virtual.</p>
+
+    <button class="btn" onclick="blowCake()">
+      🌬️ TIUP LILIN
+    </button>
+  </div>
+</section>
+
+
+<!-- SURAT DIGITAL -->
+
+<section id="surat">
+  <h2 class="section-title">💌 Surat Untukmu</h2>
+
+  <div class="message" id="longLetter">
+    Untuk seseorang yang sangat spesial...
+
+    Selamat ulang tahun! ❤️
+
+    Hari ini adalah hari yang sangat istimewa.
+    Aku berharap setiap langkah yang kamu ambil
+    selalu membawa kebahagiaan.
+
+    Jangan pernah meragukan kemampuan dirimu.
+    Kamu punya banyak hal hebat yang menunggumu
+    di masa depan.
+
+    Teruslah berusaha, teruslah tersenyum,
+    dan jangan lupa menikmati setiap perjalanan.
+
+    Semoga semua doa baik segera menjadi kenyataan.
+
+    HAPPY BIRTHDAY! 🎂💗
+  </div>
+
+  <button class="btn" onclick="showSurprise()">
+    🎁 BUKA KEJUTAN
+  </button>
+
+  <div id="surprise" class="hidden box" style="margin-top:20px">
+    <h2>🎉 SURPRISE!!! 🎉</h2>
+    <p>Semoga kebahagiaan selalu menyertaimu! ❤️</p>
+    <div style="font-size:50px">🎂🎈💖🌸✨</div>
+  </div>
+</section>
+
+
+<!-- GAME -->
+
+<section id="game">
+  <h2 class="section-title">🎮 Mini Game</h2>
+  <div class="box">
+    <h3>Berapa banyak cinta hari ini?</h3>
+    <p>Klik tombol untuk mendapatkan kejutan!</p>
+    <div class="game-result" id="gameResult">💗 ???</div>
+    <button class="btn" onclick="playGame()">
+      KLIK AKU 💕
+    </button>
+  </div>
+</section>
+
+
+<!-- EDITOR -->
+
+<section>
+  
+  <button class="btn" onclick="toggleMusic()">
+    🎵 MUSIK ON/OFF
+  </button>
+
+  <button class="btn" onclick="toggleTheme()">
+    🎨 GANTI TEMA
+  </button>
+
+  <button class="btn" onclick="fullScreen()">
+    ⛶ FULLSCREEN
+  </button>
+
+  <button class="btn" onclick="window.scrollTo(0,0)">
+    ⬆ KEMBALI KE ATAS
+  </button>
+
+  <div id="editor">
+    <h2 style="text-align:center;color:#d64b91">
+      ✏️ EDIT WEBSITE
+    </h2>
+
+    <label>Judul utama</label>
+    <input id="eTitle">
+
+    <label>Nama penerima</label>
+    <input id="eName">
+
+    <label>Tanggal</label>
+    <input id="eDate">
+
+    <label>Ucapan pembukaan</label>
+    <textarea id="eIntro"></textarea>
+
+    <label>Surat panjang</label>
+    <textarea id="eLetter"></textarea>
+
+    <hr>
+
+    <h3>EDIT 10 FOTO</h3>
+    <div id="photoEditor"></div>
+
+    <button class="btn" onclick="saveAll()">
+      💾 SIMPAN SEMUA
+    </button>
+  </div>
+</section>
+
+
+<footer>
+  <h2>HAPPY BIRTHDAY! 🎂</h2>
+  Dibuat dengan penuh cinta ❤️
+  <br>
+  Semoga hari ini menjadi kenangan yang indah.
+  <br>
+  <span id="footerName">For Someone Special 💗</span>
+</footer>
+
+</div>
+
+
+<!-- LIGHTBOX FOTO -->
+
+<div id="lightbox" onclick="closePhoto()">
+  <img id="bigPhoto" alt="Foto kenangan">
+</div>
+
+
+<!-- MUSIK -->
+
+<audio id="music" loop>
+  <source src="audio/musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+// DATA 10 FOTO
+
+const defaultPhotos = [
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-c02b05cd-85bb-4927-9bcf-5cd7e0764b52.jpg",
+  title:"Momen di pegunungan 💗",
+  caption:"Sejauh apapun perjalanan, selalu ada keindahan dan pelajaran di setiap langkah."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-80fc2996-0b2b-4cd5-9149-fc5d2188a655.jpg",
+  title:"Momen di atas balkon 🌸",
+  caption:"Menikmati suasana, mengagumi keindahan alam, dan menyimpan cerita di dalam diam."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-b10f4059-f09c-4278-b479-2c37a04afdf5.jpg",
+  title:"Momen selfie ✨",
+  caption:"Senyum sederhana, wajah penuh cerita, dan kenangan yang akan selalu berharga."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-6333b6df-6c5c-4a3f-acb4-0ddccd62e3c3.jpg",
+  title:"Kenangan Manis 🎀",
+  caption:"Hal sederhana bisa menjadi sangat berharga."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-147ec905-1ddc-4090-9f75-3824922a9f21.jpg",
+  title:"Hari Istimewa 🎂",
+  caption:"Semoga selalu ada alasan untuk merayakan. Dan jalur healing paling bener mah ke curug pikiran langsung tenang."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-c34a26e6-2f34-4bf6-8054-ea186363aaab.jpg",
+  title:"Bersantai di cafe 💕",
+  caption:"Menatap lampu kota, merangkai mimpi di bawah langit senja, ANJJJAAYY KELAZZ."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-0040daeb-1d36-407c-8888-15d4dcfa5aae.jpg",
+  title:"Bunga Untukmu 🌷",
+  caption:"Masa masa sekolah yang bakal di kangenin nanti. Ketawa bareng seru-seruan bareng."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-aa357c2a-29b7-434a-b6e1-20414ec330a1.jpg",
+  title:"Mimpi Indah 3078🌙",
+  caption:"Nanjak 3078 MDPL. Niatnya healing, malah berasa olahraga ekstrem. Atap jawa Barat checked! Next kemana lagi ya?. Merbabu?."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-d53efe16-1463-4e9d-b881-7925bd08dde3.jpg",
+  title:"Senyum Bahagia 😊",
+  caption:"Senyum kecil bisa membuat hari menjadi lebih cerah."
+ },
+ {
+  url:"https://cdn.phototourl.com/member/2026-11-06-6e6b0e61-a26c-4876-95a2-2a286c49dc51.jpg",
+  title:"Selamanya Spesial ❤️",
+  caption:"Ini hanyalah satu dari banyak cerita indah."
+ }
+];
+
+let photos = JSON.parse(JSON.stringify(defaultPhotos));
+
+
+// MEMBUKA SURAT
+
+function openLetter() {
+ const envelope=document.getElementById("envelope");
+ envelope.classList.add("open");
+
+ confetti();
+
+ setTimeout(()=>{
+  document.getElementById("opening").classList.add("hidden");
+  document.getElementById("main").classList.remove("hidden");
+  renderGallery();
+  renderEditor();
+  window.scrollTo(0,0);
+  typeText();
+ },1200);
+}
+
+
+// GALERI
+
+function renderGallery() {
+ const gallery=document.getElementById("gallery");
+ gallery.innerHTML="";
+
+ photos.forEach((p,i)=>{
+  gallery.innerHTML+=`
+   <div class="photo">
+    <img src="${p.url}" alt="Foto ${i+1}"
+    onclick="viewPhoto(${i})">
+    <h3>${p.title}</h3>
+    <p>${p.caption}</p>
+   </div>
+  `;
+ });
+}
+
+
+// POPUP FOTO
+
+function viewPhoto(i) {
+ document.getElementById("bigPhoto").src=photos[i].url;
+ document.getElementById("lightbox").style.display="flex";
+}
+
+function closePhoto() {
+ document.getElementById("lightbox").style.display="none";
+}
+
+
+// SLIDESHOW
+
+let slideTimer=null;
+let slideIndex=0;
+
+function startSlideshow() {
+ stopSlideshow();
+
+ slideIndex=0;
+ viewPhoto(slideIndex);
+
+ slideTimer=setInterval(()=>{
+  slideIndex=(slideIndex+1)%10;
+  document.getElementById("bigPhoto").src=photos[slideIndex].url;
+ },2500);
+}
+
+function stopSlideshow() {
+ clearInterval(slideTimer);
+ slideTimer=null;
+}
+
+
+// KONFETI
+
+function confetti() {
+ const icons=["💗","❤️","🎉","✨","🌸","🎊","💖"];
+
+ for(let i=0;i<65;i++) {
+  let el=document.createElement("div");
+  el.className="fall";
+  el.innerText=icons[Math.floor(Math.random()*icons.length)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.fontSize=(15+Math.random()*22)+"px";
+  el.style.animationDuration=(3+Math.random()*4)+"s";
+
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),7000);
+ }
+}
+
+
+// JAM DIGITAL
+
+function updateClock() {
+ const now=new Date();
+
+ document.getElementById("hours").innerText=
+ String(now.getHours()).padStart(2,"0");
+
+ document.getElementById("minutes").innerText=
+ String(now.getMinutes()).padStart(2,"0");
+
+ document.getElementById("seconds").innerText=
+ String(now.getSeconds()).padStart(2,"0");
+
+ document.getElementById("digitalClock").innerText=
+ now.toLocaleDateString("id-ID",{
+  weekday:"long",day:"numeric",month:"long",year:"numeric"
+ });
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+
+// TIUP LILIN
+
+function blowCake() {
+ document.getElementById("cakeEmoji").innerText="🍰";
+ document.getElementById("cakeText").innerText=
+ "Yeay! Semoga semua harapanmu tercapai! ❤️";
+
+ confetti();
+}
+
+
+// KEJUTAN
+
+function showSurprise() {
+ document.getElementById("surprise").classList.toggle("hidden");
+ confetti();
+}
+
+
+// MINI GAME
+
+function playGame() {
+ const results=[
+  "1000000% CINTA ❤️",
+  "KAMU SANGAT SPESIAL 💗",
+  "SEJUTA KEBAHAGIAAN 🎉",
+  "BANYAK SEKALI DOA BAIK 🌸",
+  "SELALU JADI YANG TERBAIK ✨"
+ ];
+
+ document.getElementById("gameResult").innerText=
+ results[Math.floor(Math.random()*results.length)];
+
+ confetti();
+}
+
+
+// MUSIK
+
+let musicOn=false;
+
+function toggleMusic() {
+ const music=document.getElementById("music");
+
+ if(musicOn) {
+  music.pause();
+  musicOn=false;
+ } else {
+  music.play().then(()=>{
+   musicOn=true;
+  }).catch(()=>{
+   alert("Pastikan musik.mp3 tersedia di folder website.");
+  });
+ }
+}
+
+
+// TEMA
+
+let theme=0;
+
+function toggleTheme() {
+ const themes=[
+  ["#fff0f6","#803b60"],
+  ["#eee8ff","#68448e"],
+  ["#fff3d9","#936329"],
+  ["#e1f8f2","#347d70"]
+ ];
+
+ theme=(theme+1)%themes.length;
+
+ document.body.style.background=themes[theme][0];
+ document.body.style.color=themes[theme][1];
+}
+
+
+// FULLSCREEN
+
+function fullScreen() {
+ if(!document.fullscreenElement) {
+  document.documentElement.requestFullscreen?.();
+ } else {
+  document.exitFullscreen?.();
+ }
+}
+
+
+// EFEK MENGETIK
+
+function typeText() {
+ const text="Hari ini adalah hari yang sangat spesial! 💗";
+ let i=0;
+
+ const target=document.getElementById("typing");
+ target.innerText="";
+
+ const timer=setInterval(()=>{
+  target.innerText+=text.charAt(i);
+  i++;
+
+  if(i>=text.length) clearInterval(timer);
+ },65);
+}
+
+
+// EDITOR
+
+function renderEditor() {
+ const container=document.getElementById("photoEditor");
+ container.innerHTML="";
+
+ photos.forEach((p,i)=>{
+  container.innerHTML+=`
+   <hr style="margin:20px 0">
+
+   <h3>Foto ${i+1}</h3>
+
+   <label>Upload foto ${i+1}</label>
+   <input type="file" accept="image/*" id="file${i}">
+
+   <label>Judul foto</label>
+   <input id="title${i}" value="${escapeHTML(p.title)}">
+
+   <label>Tulisan pendek</label>
+   <textarea id="caption${i}">${escapeHTML(p.caption)}</textarea>
+  `;
+ });
+}
+
+function escapeHTML(value) {
+ return String(value).replace(/[&<>"']/g, c=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",
+  '"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+
+// EDIT WEBSITE
+
+function toggleEditor() {
+ const editor=document.getElementById("editor");
+
+ editor.style.display=
+ editor.style.display==="block"?"none":"block";
+
+ document.getElementById("eTitle").value=
+ document.getElementById("heroTitle").innerText;
+
+ document.getElementById("eName").value=
+ document.getElementById("heroName").innerText;
+
+ document.getElementById("eDate").value=
+ document.getElementById("heroDate").innerText;
+
+ document.getElementById("eIntro").value=
+ document.getElementById("introText").innerText;
+
+ document.getElementById("eLetter").value=
+ document.getElementById("longLetter").innerText;
+
+ photos.forEach((p,i)=>{
+  document.getElementById("title"+i).value=p.title;
+  document.getElementById("caption"+i).value=p.caption;
+ });
+}
+
+
+// SIMPAN PERUBAHAN
+
+async function saveAll() {
+ try {
+  const newPhotos=[];
+
+  for(let i=0;i<10;i++) {
+   let url=photos[i].url;
+
+   const file=document.getElementById("file"+i).files[0];
+
+   if(file) {
+    if(!file.type.startsWith("image/")) {
+     alert("File foto harus berupa gambar.");
+     return;
+    }
+
+    if(file.size>1.5*1024*1024) {
+     alert("Ukuran setiap foto maksimal 1.5 MB.");
+     return;
+    }
+
+    url=await readImage(file);
+   }
+
+   newPhotos.push({
+    url:url,
+    title:document.getElementById("title"+i).value,
+    caption:document.getElementById("caption"+i).value
+   });
+  }
+
+  const data={
+   title:document.getElementById("eTitle").value,
+   name:document.getElementById("eName").value,
+   date:document.getElementById("eDate").value,
+   intro:document.getElementById("eIntro").value,
+   letter:document.getElementById("eLetter").value,
+   photos:newPhotos
+  };
+
+  localStorage.setItem("birthdayWebsite",JSON.stringify(data));
+
+  applyData(data);
+
+  document.getElementById("editor").style.display="none";
+
+  alert("Semua perubahan berhasil disimpan! 💗");
+
+ } catch(e) {
+  alert("Penyimpanan penuh. Kurangi ukuran foto lalu coba lagi.");
+ }
+}
+
+
+// MEMBACA FOTO
+
+function readImage(file) {
+ return new Promise((resolve,reject)=>{
+  const reader=new FileReader();
+  reader.onload=()=>resolve(reader.result);
+  reader.onerror=reject;
+  reader.readAsDataURL(file);
+ });
+}
+
+
+// TERAPKAN DATA
+
+function applyData(data) {
+ document.getElementById("heroTitle").innerText=data.title;
+ document.getElementById("heroName").innerText=data.name;
+ document.getElementById("heroDate").innerText=data.date;
+ document.getElementById("introText").innerText=data.intro;
+ document.getElementById("longLetter").innerText=data.letter;
+ document.getElementById("footerName").innerText=data.name;
+
+ photos=data.photos;
+ renderGallery();
+}
+
+
+// MUAT DATA TERSIMPAN
+
+window.addEventListener("DOMContentLoaded",()=>{
+ try {
+  const saved=localStorage.getItem("birthdayWebsite");
+
+  if(saved) applyData(JSON.parse(saved));
+ } catch(e) {
+  console.log("Data belum tersedia.");
+ }
+});
+
+</script>
+
+</body>
+</html>

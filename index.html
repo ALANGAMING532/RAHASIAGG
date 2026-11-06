@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Awal</title>
+    <style>
+      :root {
+        --bg1: #ffe5f3;
+        --bg2: #f7d9ff;
+        --card: rgba(255, 255, 255, 0.7);
+        --pink: #ef77b3;
+        --pink-deep: #d84a91;
+        --purple: #8e6ae8;
+        --text: #6d2d5d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--bg1), var(--bg2), #e7d8ff);
+        color: var(--text);
+      }
+
+      .card {
+        width: min(90vw, 560px);
+        padding: 40px 28px;
+        border-radius: 28px;
+        text-align: center;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 18px 40px rgba(157, 72, 119, 0.18);
+        backdrop-filter: blur(8px);
+      }
+
+      .emoji {
+        font-size: 3rem;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--pink-deep);
+      }
+
+      p {
+        margin: 0 0 28px;
+        line-height: 1.7;
+        font-size: 1.05rem;
+      }
+
+      #book {
+        cursor: pointer;
+        border: none;
+        padding: 16px 30px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--pink), var(--purple));
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        box-shadow: 0 10px 20px rgba(181, 99, 154, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      #book:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 14px 24px rgba(181, 99, 154, 0.32);
+      }
+
+      #book:active {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="emoji">🌸</span>
+      <h1>Selamat Datang</h1>
+      <p>
+        Halaman ini adalah pintu masuk ke taman kenangan. Tekan tombol di bawah untuk
+        melanjutkan ke halaman berikutnya.
+      </p>
+      <button id="book" onclick="window.location.href='halaman2.html'">
+        LANJUT KE TAMAN KENANGAN 🌸
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
