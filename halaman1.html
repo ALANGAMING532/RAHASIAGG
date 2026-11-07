@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blooming Birthday 🌸</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  background: linear-gradient(#171b43, #514b80, #f5a9c6);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 35px;
+  color: #ffe0ee;
+  font-size: clamp(25px, 6vw, 42px);
+  text-shadow: 0 0 15px #ff83bc;
+  animation: muncul 2s ease;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #fff0f7;
+  font-size: 15px;
+}
+
+.garden {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(12px, 6vw, 65px);
+  padding-bottom: 30px;
+  background: linear-gradient(transparent, #315b48 90%);
+}
+
+.flower {
+  position: relative;
+  width: 85px;
+  height: 280px;
+}
+
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 39px;
+  width: 7px;
+  height: 0;
+  border-radius: 20px;
+  background: linear-gradient(#85d879, #23834d);
+  transform-origin: bottom;
+  animation: grow 3s ease-out forwards;
+}
+
+.leaf {
+  position: absolute;
+  bottom: 85px;
+  left: 40px;
+  width: 38px;
+  height: 19px;
+  background: #69c779;
+  border-radius: 100% 0 100% 0;
+  transform: scale(0);
+  animation: leaf 1s 2.5s forwards;
+}
+
+.leaf.left {
+  left: 5px;
+  bottom: 110px;
+  transform-origin: right;
+}
+
+.bloom {
+  position: absolute;
+  left: 10px;
+  bottom: 190px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: bloom 2s 3s ease-out forwards;
+}
+
+.petal {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 23px;
+  height: 35px;
+  background: #ff8fbd;
+  border-radius: 50%;
+  transform-origin: 11px 35px;
+  box-shadow: 0 0 12px #ffb6d3;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg); }
+.petal:nth-child(2) { transform: rotate(72deg); }
+.petal:nth-child(3) { transform: rotate(144deg); }
+.petal:nth-child(4) { transform: rotate(216deg); }
+.petal:nth-child(5) { transform: rotate(288deg); }
+
+.center {
+  position: absolute;
+  left: 27px;
+  top: 27px;
+  width: 18px;
+  height: 18px;
+  background: #ffe68a;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffe68a;
+}
+
+.flower:nth-child(2) .petal {
+  background: #d9a4ff;
+}
+
+.flower:nth-child(3) .petal {
+  background: #fff0a8;
+}
+
+.flower:nth-child(4) .petal {
+  background: #ff9cb0;
+}
+
+.flower:nth-child(2) .bloom {
+  animation-delay: 4s;
+}
+
+.flower:nth-child(3) .bloom {
+  animation-delay: 5s;
+}
+
+.flower:nth-child(4) .bloom {
+  animation-delay: 6s;
+}
+
+@keyframes grow {
+  to { height: 190px; }
+}
+
+@keyframes leaf {
+  to { transform: scale(1); }
+}
+
+@keyframes bloom {
+  0% { transform: scale(0) rotate(-30deg); }
+  70% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.butterfly {
+  position: absolute;
+  font-size: 28px;
+  animation: fly 8s infinite ease-in-out;
+}
+
+.b1 { top: 35%; left: 10%; }
+.b2 { top: 55%; right: 12%; animation-delay: 2s; }
+
+@keyframes fly {
+  0%,100% { transform: translate(0,0) rotate(0); }
+  50% { transform: translate(55px,-65px) rotate(20deg); }
+}
+
+.star {
+  position: absolute;
+  color: #fff3a7;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1.4); }
+}
+
+.petal-fall {
+  position: absolute;
+  top: -30px;
+  color: #ffc0d9;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+.message {
+  position: relative;
+  z-index: 2;
+  margin: 30px auto;
+  max-width: 90%;
+  color: white;
+  animation: muncul 4s ease;
+}
+
+.message p {
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 18px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #ff8fbd;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff9ac9;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+@keyframes muncul {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#surprise {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  background: rgba(30,15,55,.95);
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.card {
+  background: #fff0f6;
+  color: #c34e83;
+  border-radius: 25px;
+  padding: 30px 22px;
+  max-width: 380px;
+  line-height: 1.8;
+  box-shadow: 0 0 30px #ffb5d4;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Happy Birthday 🌸</h1>
+<div class="subtitle">A Garden of Happiness For You 💗</div>
+
+<div class="message">
+  <p>
+    Untuk perempuan terbaik,<br>
+    semoga hidupmu selalu indah seperti bunga
+    yang sedang bermekaran.
+  </p>
+  <button onclick="openSurprise()">
+    💌 Buka Pesan Spesial
+  </button>
+</div>
+
+<div class="garden">
+
+  <div class="flower">
+    <div class="stem"></div>
+    <div class="leaf"></div>
+    <div class="leaf left"></div>
+    <div class="bloom">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+
+  <div class="flower">
+    <div class="stem"></div>
+    <div class="leaf"></div>
+    <div class="leaf left"></div>
+    <div class="bloom">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+
+  <div class="flower">
+    <div class="stem"></div>
+    <div class="leaf"></div>
+    <div class="leaf left"></div>
+    <div class="bloom">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+
+  <div class="flower">
+    <div class="stem"></div>
+    <div class="leaf"></div>
+    <div class="leaf left"></div>
+    <div class="bloom">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="butterfly b1">🦋</div>
+<div class="butterfly b2">🦋</div>
+
+<div id="surprise">
+  <div class="card">
+    <h2>🌷 Untukmu 🌷</h2>
+    Selamat ulang tahun!
+
+    Semoga setiap hari dalam hidupmu
+    dipenuhi kebahagiaan, cinta,
+    kesehatan, dan keberuntungan.
+
+    Teruslah tumbuh seperti bunga,
+    tetap indah dengan caramu sendiri,
+    dan jangan pernah berhenti bermimpi.
+
+    Kamu adalah bunga yang sangat
+    berharga di keluarga mu. 💗
+
+    <h3>HAPPY BIRTHDAY! 🎂</h3>
+    <a href="halaman4.html" onlick="closeSurprise()">
+      <button>Halaman kedua 💕</button>
+  </div>
+</div>
+
+<script>
+function openSurprise() {
+  document.getElementById("surprise").style.display = "flex";
+}
+
+function closeSurprise() {
+  document.getElementById("surprise").style.display = "none";
+}
+
+// Membuat bintang berkilau
+for(let i=0; i<35; i++) {
+  let star = document.createElement("div");
+  star.className = "star";
+  star.innerHTML = "✦";
+  star.style.left = Math.random()*100 + "%";
+  star.style.top = Math.random()*75 + "%";
+  star.style.animationDelay = Math.random()*3 + "s";
+  document.body.appendChild(star);
+}
+
+// Kelopak bunga berjatuhan
+for(let i=0; i<25; i++) {
+  let petal = document.createElement("div");
+  petal.className = "petal-fall";
+  petal.innerHTML = "🌸";
+  petal.style.left = Math.random()*100 + "%";
+  petal.style.animationDuration = (5+Math.random()*8)+"s";
+  petal.style.animationDelay = Math.random()*8+"s";
+  petal.style.fontSize = (12+Math.random()*15)+"px";
+  document.body.appendChild(petal);
+}
+</script>
+
+<audio id="birthdayMusic" loop autoplay>
+  <source src="audio/musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("birthdayMusic");
+
+document.addEventListener("click", function mulaiMusik() {
+  music.play();
+  document.removeEventListener("click", mulaiMusik);
+});
+
+document.addEventListener("touchstart", function mulaiMusik() {
+  music.play();
+}, { once: true });
+</script>
+</body>
+</html>
